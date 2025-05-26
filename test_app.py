@@ -15,7 +15,7 @@ class APITestCase(unittest.TestCase):
     def test_items(self):
         response = self.client.get('/items')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json, {"items":["item2","item3"]})
+        self.assertEqual(response.json, {"items":["item1","item2","item3"]})
 
     def test_acesso_token(self):
         response_login = self.client.post('/login')
