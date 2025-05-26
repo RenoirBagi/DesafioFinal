@@ -23,7 +23,7 @@ class APITestCase(unittest.TestCase):
         print(token)
 
         response_protected = self.client.get('/protected', headers={'Authorization': f"Bearer {token}"})
-        self.assertEqual(response_protected.status_code, 201)
+        self.assertEqual(response_protected.status_code, 200)
         self.assertEqual(response_protected.json, {'message': 'Protected route'})    
 
 
